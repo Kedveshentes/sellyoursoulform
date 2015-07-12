@@ -1,1 +1,1 @@
-var formApplication = angular.module('formApplication', []);
+var formApplication = angular.module('formApplication', ['offClick']);

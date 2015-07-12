@@ -8,8 +8,10 @@
 
  	<script type="text/javascript" src="angular/angular.js"></script>
 	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="offClick.js"></script>
 	<script type="text/javascript" src="form/formController.js"></script>
 	<script type="text/javascript" src="form/formService.js"></script>
+	<script type="text/javascript" src="autocomplete/autoCompleteDirective.js"></script>
 </head>
 <body>
 	<div class="container" ng-controller="formController">
@@ -36,7 +38,12 @@
 					Occupation
 				</label>
 				<div class="col-sm-9">
-					<input type="text" ng-model="user.occupation" class="form-control">
+					<!-- <input type="text" ng-model="user.occupation" class="form-control"> -->
+					<div
+						auto-complete
+						selected-suggestion="user.occupation"
+					>
+					</div>
 				</div>
 			</div>
 			<div class="form-group">
