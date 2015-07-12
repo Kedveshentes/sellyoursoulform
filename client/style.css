@@ -1,8 +1,15 @@
 .occupation_form {
 }
-
+.occupation_form .form-control {
+	transition: background-color 0.3s;
+	transition-timing-function: ease-in-out;
+}
 .occupation_form .form-control.ng-invalid.ng-touched {
 	background-color: #fa9;
+}
+
+.occupation_form .btn {
+	width: 100%;
 }
 
 .suggestions_block {
