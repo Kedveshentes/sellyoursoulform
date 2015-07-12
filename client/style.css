@@ -1,0 +1,10 @@
+.occupation_form {
+}
+
+.occupation_form .form-control.ng-invalid.ng-touched {
+	background-color: #fa9;
+}
+/*
+.occupation_form .submit {
+	float: right;
+}*/

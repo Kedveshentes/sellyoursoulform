@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="formApplication">
+<head>
+	<title>Generic Form</title>
+
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<link type="text/css" rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+
+ 	<script type="text/javascript" src="angular/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="form/formController.js"></script>
+	<script type="text/javascript" src="form/formService.js"></script>
+</head>
+<body>
+	<div class="container" ng-controller="formController">
+		<h1>Occupation form</h1>
+		<form name="form" novalidate ng-submit="submit(user)" class="occupation_form form-horizontal col-xs-12 col-sm-8 col-sm-offset-2">
+			<div class="form-group">
+				<label for="" class="col-sm-3 control-label">
+					Name
+				</label>
+				<div class="col-sm-9">
+					<input type="text" ng-model="user.name" class="form-control" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-3 control-label">
+					E-mail
+				</label>
+				<div class="col-sm-9">
+					<input type="email" ng-model="user.email" class="form-control" required ng-pattern ="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-3 control-label">
+					Occupation
+				</label>
+				<div class="col-sm-9">
+					<input type="text" ng-model="user.occupation" class="form-control" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-3 control-label">
+					Date of birth
+				</label>
+				<div class="col-sm-9">
+					<input type="date" ng-model="user.birthdate" class="form-control" required placeholder="Date of birth">
+				</div>
+			</div>
+			<input type="submit" value="Submit" ng-disabled="form.$invalid" class="btn btn-primary col-sm-6">
+		</form>
+	</div>
+</body>
+</html>
