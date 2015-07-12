@@ -17,30 +17,27 @@
 	<div class="container" ng-controller="formController">
 		<h1>Occupation form</h1>
 		<form name="form" novalidate ng-submit="submit(user)" class="occupation_form form-horizontal col-xs-12 col-sm-8 col-sm-offset-2">
+			
 			<div class="form-group">
-				<label for="" class="col-sm-3 control-label">
-					Name
-				</label>
-				<div class="col-sm-6">
+				<label for="name" class="col-sm-3 control-label">Name</label>
+				<div class="col-sm-5">
 					<input type="text" name="name" ng-model="user.name" class="form-control" required>
 				</div>
-				<span class="col-sm-3" ng-show="form.name.$error.required && form.name.$touched">Please enter your name.</span>
+				<span class="col-sm-4" ng-show="form.name.$error.required && form.name.$touched">Please enter your name.</span>
 			</div>
+
 			<div class="form-group">
-				<label for="" class="col-sm-3 control-label">
-					E-mail
-				</label>
-				<div class="col-sm-6">
+				<label for="email" class="col-sm-3 control-label">E-mail</label>
+				<div class="col-sm-5">
 					<input type="email" name="email" ng-model="user.email" class="form-control" required ng-pattern ="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/">
 				</div>
-				<span class="col-sm-3" ng-show="form.email.$error.required && form.email.$touched">Please enter your E-mail address.</span>
-				<span class="col-sm-3" ng-show="form.email.$error.pattern && form.email.$touched">Please enter a valid E-mail address.</span>
+				<span class="col-sm-4" ng-show="form.email.$error.required && form.email.$touched">Please enter your E-mail address.</span>
+				<span class="col-sm-4" ng-show="form.email.$error.pattern && form.email.$touched">Please enter a valid E-mail address.</span>
 			</div>
+
 			<div class="form-group">
-				<label for="" class="col-sm-3 control-label">
-					Occupation
-				</label>
-				<div class="col-sm-6">
+				<label for="occupation" class="col-sm-3 control-label">Occupation</label>
+				<div class="col-sm-5">
 					<div
 						auto-complete
 						selected-suggestion="user.occupation"
@@ -48,22 +45,21 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="form-group">
-				<label for="" class="col-sm-3 control-label">
-					Date of birth
-				</label>
-				<div class="col-sm-6">
+				<label for="" class="col-sm-3 control-label">Date of birth</label>
+				<div class="col-sm-5">
 					<input type="date" name="birthdate" ng-model="user.birthdate" class="form-control" ng-change="dateChanged()">
 				</div>
-				<!-- <div class="alert alert-warning" role="alert">...</div>
-				<div class="alert alert-danger" role="alert">...</div> -->
-				<span class="col-sm-3 alert alert-danger" ng-show="tooYoung && form.birthdate.$touched">You must be 18 or older.</span>
+				<span class="col-sm-4" ng-show="tooYoung && form.birthdate.$touched">You must be 18 or older.</span>
 			</div>
+
 			<div class="form-group">
-				<div class="col-sm-6 col-sm-offset-3">
+				<div class="col-sm-5 col-sm-offset-3">
 					<input type="submit" value="Submit" ng-disabled="form.$invalid" class="btn btn-primary">
 				</div>
 			</div>
+
 		</form>
 	</div>
 </body>
