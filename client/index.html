@@ -6,7 +6,8 @@
 	<link type="text/css" rel="stylesheet" href="style.css">
 	<link type="text/css" rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
 
- 	<script type="text/javascript" src="angular/angular.js"></script>
+	<script type="text/javascript" src="moment/moment.js"></script>
+	<script type="text/javascript" src="angular/angular.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="offClick.js"></script>
 	<script type="text/javascript" src="form/formController.js"></script>
@@ -15,8 +16,8 @@
 </head>
 <body>
 	<div class="container" ng-controller="formController">
-		<h1>Occupation form</h1>
 		<form name="form" novalidate ng-submit="submit(user)" class="occupation_form form-horizontal col-xs-12 col-sm-8 col-sm-offset-2">
+			<h1>Occupation form</h1>
 			
 			<div class="form-group">
 				<label for="name" class="col-sm-3 control-label">Name</label>

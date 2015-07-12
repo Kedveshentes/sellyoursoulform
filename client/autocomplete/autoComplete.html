@@ -5,7 +5,7 @@
 		ng-change   ="search()"
 		class       ="form-control"
 		ng-blur     ="lostFocus()"
-		ng-keydown  ="checkKeyDown($event)"
+		ng-keydown  ="checkKeyDown($event, $index)"
 	>
 	<div class="suggestions_block col-sm-12">
 		<ul class="suggestions" ng-show="searchArray.length > 0 && searchText.length > 0">

@@ -1,13 +1,23 @@
 .occupation_form {
+	border: 1px solid #eee;
+	border-left-color: #1b809e;
+	padding: 20px;
+	margin: 20px 0;
+	border-left-width: 5px;
+	border-radius: 3px;
+	border-width: 1px 1px 1px 5px;
 }
 .occupation_form .form-control {
 	transition: background-color 0.3s;
 	transition-timing-function: ease-in-out;
 }
 .occupation_form .form-control.ng-invalid.ng-touched {
+	box-shadow: 0 1px 1px #ebccd1 inset, 0 0 8px #ebccd1;
+	outline: 0 none;
 	background-color: #f2dede;
 	color: #a94442;
 	border-color: #ebccd1;
+	bor
 }
 
 .occupation_form .btn {
@@ -35,8 +45,3 @@
 	background-color: #337AB7;
 	color: white;
 }
-
-/*
-.occupation_form .submit {
-	float: right;
-}*/

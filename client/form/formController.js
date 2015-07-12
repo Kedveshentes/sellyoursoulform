@@ -1,21 +1,20 @@
 formApplication.controller('formController', ['$scope', 'formService',
 	function ($scope, formService) {
 
-		var todayMinus18 = new Date();
-		todayMinus18.setFullYear(todayMinus18.getFullYear() - 18);
+		var aMoment18YearsAgo = moment().subtract(18, 'years');
 
 		$scope.dateChanged = function () {
-			$scope.tooYoung = $scope.user.birthdate > todayMinus18;
+			$scope.tooYoung = moment($scope.user.birthdate) > aMoment18YearsAgo;
 			$scope.form.birthdate.$setValidity("You are too young", !$scope.tooYoung);
 		}
 
 		$scope.submit = function (user) {
 			formService.sendUserData(user)
 				.success(function (data) {
-					console.log(data);
+					alert('Your data has been sent successfully!')
 				})
 				.error(function (data) {
-					console.log('error');
+					alert('Something went wrong, most likely you have passed the client side validation.')
 				});
 		}
 	}]);
