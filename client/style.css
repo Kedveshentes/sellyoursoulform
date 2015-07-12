@@ -4,6 +4,29 @@
 .occupation_form .form-control.ng-invalid.ng-touched {
 	background-color: #fa9;
 }
+
+.suggestions_block {
+	position: absolute;
+	height: 0px;
+	z-index: 10;
+}
+.suggestions {
+	margin-top: -1px;
+	border: solid #ccc;
+	border-width: 0px 1px 1px;
+	border-radius: 0px 0px 4px 4px;
+	background-color: white;
+	list-style-type: none;
+	padding: 5px 0px;
+}
+.suggestions .searchResultRow {
+	padding: 3px 0px 5px 15px;
+}
+.suggestions .searchResultRow.active {
+	background-color: #337AB7;
+	color: white;
+}
+
 /*
 .occupation_form .submit {
 	float: right;
